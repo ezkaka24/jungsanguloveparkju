@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이대원의 여친을 맞춰보세요!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: black; /* 배경색을 검은색으로 설정 */
+            color: white; /* 텍스트 색상을 흰색으로 설정 */
+            margin: 0; /* 페이지 여백 제거 */
+            padding: 0; /* 페이지 여백 제거 */
+        }
+        .container {
+            margin-top: 100px;
+        }
+        input[type="text"], button {
+            background-color: #333; /* 입력 상자와 버튼 배경색을 어두운 회색으로 설정 */
+            color: white; /* 입력 상자와 버튼 텍스트 색상을 흰색으로 설정 */
+            border: none; /* 테두리 제거 */
+            padding: 10px; /* 내부 여백 설정 */
+            margin: 5px; /* 외부 여백 설정 */
+            border-radius: 5px; /* 모서리를 둥글게 설정 */
+        }
+        button:hover {
+            cursor: pointer; /* 버튼 위에 마우스를 올렸을 때 포인터 모양으로 변경 */
+        }
+    </style>
+    <script>
+        function checkAnswer() {
+            var question = document.getElementById("question").value;
+            var answerDisplay = document.getElementById("answer");
+            var answer;
+
+            if (question === "홍잼") {
+                answer = "정답입니다!";
+            } else {
+                answer = "이걸 틀리냐 이 쭹쐉아";
+            }
+
+            answerDisplay.textContent = answer;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>이대원의 여친을 맞춰보세요!</h1>
+        <input type="text" id="question" placeholder="빨리 써 원숭아">
+        <button onclick="checkAnswer()">빨리 쓰고 이거 눌러라</button>
+        <p id="answer"></p>
+    </div>
+</body>
+</html>
